@@ -1,0 +1,94 @@
+<!doctype html> 
+<html> 
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    
+    <title>文本差异对比  轩哥QQ：211611411</title>
+    
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="jquery.min.js"></script>
+    
+    
+    <!-- 页面通用自定义css文件 -->
+    <link rel="stylesheet" href="style.css" />
+    
+    
+    <link rel="stylesheet" href="diffview.css">
+    
+    <link rel="stylesheet" href="my.css">
+
+    <script src="diffview.js"></script>
+    
+    <script src="difflib.js"></script>
+    
+    <script src="function.js"></script>
+
+</head> 
+
+<body>
+
+<div id="particles"></div>
+<div><br></div>
+<div class="container">
+    
+<div class="panel panel-default">
+<div class="panel-heading">文本差异对比</div>
+<div class="panel-body">
+    <input type="hidden" id="contextSize" value="">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <p>Base Text（基础文本）</p>
+            <textarea id="baseText" class="form-control" rows="10"></textarea>
+        </div>
+        
+        <div class="col-md-6">
+            <br class="visible-xs-block">
+            <p>New Text（对比文本）</p>
+            <textarea id="newText" class="form-control" rows="10"></textarea>
+        </div>
+    </div> <!--class="row"-->
+
+    <div class="toolbar text-right">
+        对比方式：
+        <label class="radio-inline">
+            <input type="radio" name="viewType" id="beside" value=0> 左右并排
+        </label>
+        
+        <label class="radio-inline">
+            <input type="radio" name="viewType" id="inline" value=1 checked> 上下对比  
+        </label>
+        &nbsp;
+        <button type="button" class="btn btn-primary btn-check" onclick="javascript:diffUsingJS();">对比</button>
+    </div>
+    
+    <div id="diffoutput" class="table-responsive">
+    </div>
+
+</div>
+</div>  <!--class="panel panel-default"-->
+
+<div class="panel panel-default">
+    <div class="panel-heading">工具简介</div>
+    <div class="panel-body">
+       本工具能快速比对两段代码或者是文本之间的差异，并直观地展现在您面前
+    </div>
+</div>  <!--class="panel panel-default"-->
+
+
+<style>
+footer .links a {
+    color: #333;
+    margin-right: 8px;
+}
+</style>
+
+
+</div><!--class="container"中部容器-->
+
+</body> 
+</html> 
